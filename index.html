@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NEXOS-ERP · Plataforma cloud ERP + WMS + TMS + CRM para empresas de distribución</title>
+<meta name="description" content="NEXOS-ERP: plataforma cloud multi-tenant para distribuidoras y operadores logísticos mayoristas. Gestión administrativa, inventario dual Bultos UxB y Unidades, logística de repartos, preventa móvil, portal B2B y facturación electrónica ARCA.">
+<meta name="theme-color" content="#090E1A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NEXOS-ERP · Infraestructura integral para empresas de distribución">
+<meta property="og:description" content="ERP + WMS + TMS + CRM en una única plataforma cloud multi-tenant, con facturación electrónica ARCA y preventa móvil.">
+<meta property="og:image" content="captura-erp.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230284C7'/%3E%3Cpath d='M18 46V18l28 28V18' stroke='%23fff' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="marca" href="#inicio" aria-label="NEXOS-ERP, inicio">
+      <span class="marca-iso" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 23V9l14 14V9"/></svg></span>
+      <span class="marca-txt">NEXOS<span>-ERP</span></span>
+    </a>
+    <nav class="nav-links" id="menu" aria-label="Secciones">
+      <a href="#arquitectura">Arquitectura <small>ERP·WMS·TMS·CRM</small></a>
+      <a href="#capacidades">Capacidades Técnicas</a>
+      <a href="#escalabilidad">Escalabilidad</a>
+      <a href="#licenciamiento">Licenciamiento</a>
+      <a href="#contacto">Contacto</a>
+      <div class="nav-acc-movil">
+        <a class="btn btn-ghost-dark" href="https://nexos-erpmt.vercel.app" rel="noopener">Acceso Clientes</a>
+        <a class="btn btn-primary" href="#contacto">Solicitar Demostración</a>
+      </div>
+    </nav>
+    <div class="nav-acc">
+      <a class="btn btn-ghost-dark" href="https://nexos-erpmt.vercel.app" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Acceso Clientes</a>
+      <a class="btn btn-primary" href="#contacto">Solicitar Demostración</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="contenido">
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>PLATAFORMA CLOUD MULTI-TENANT · ERP + WMS + TMS + CRM / B2B</p>
+      <h1>Infraestructura integral para el gobierno operativo de empresas de distribución y logística mayorista.</h1>
+      <p class="hero-sub">Unificación nativa de gestión administrativa, control de inventario dual (Bultos UxB y Unidades), planificación de transporte, preventa móvil con aislamiento de cartera y portal B2B, compatible con facturación electrónica ARCA (A, B y C con CAE y Código QR fiscal).</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa btn-lg js-wa" data-msg="demo" href="https://wa.me/5493413231621" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true" class="ico-wa"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-2c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6C28.7 8.6 23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.2 1.2-4.2-.3-.4c-1-1.6-1.6-3.5-1.6-5.4C5.3 9.8 10.1 5.1 16 5.1s10.7 4.7 10.7 10.5S21.9 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+          Agendar Demostración Técnica (WhatsApp)</a>
+        <a class="btn btn-outline-light btn-lg" href="#contacto">Solicitar Propuesta Comercial por Email</a>
+      </div>
+      <dl class="hero-kpis">
+        <div><dt>Módulos nativos integrados</dt><dd class="num">4</dd></div>
+        <div><dt>Puesta en producción*</dt><dd class="num">24–48 h</dd></div>
+        <div><dt>Aislamiento de datos</dt><dd>RLS por fila</dd></div>
+      </dl>
+      <p class="hero-nota">* Una vez recibidos los maestros de artículos y clientes en planilla.</p>
+    </div>
+
+    <div class="hero-visual" aria-label="Capturas reales del sistema en modo demostración">
+      <figure class="frame-desk">
+        <div class="frame-bar"><i></i><i></i><i></i><span>nexos-erpmt.vercel.app · Facturación / Emisión</span></div>
+        <img src="captura-erp.png" alt="Pantalla de Facturación y Emisión del ERP con columnas Código, Cliente, BULTOS y UNIDADES" width="2400" height="1429" fetchpriority="high">
+      </figure>
+      <figure class="frame-doc">
+        <img src="captura-comprobante.png" alt="Factura A en hoja A4 apaisada, Original y Duplicado, con QR fiscal ARCA y QR de pago" width="2695" height="1906" loading="lazy">
+      </figure>
+      <figure class="frame-phone">
+        <div class="phone-notch" aria-hidden="true"></div>
+        <img src="captura-preventista.png" alt="App del preventista: cliente 01453 con alerta de deuda vencida y catálogo con carga de bultos y unidades" width="1170" height="2532" loading="lazy">
+      </figure>
+    </div>
+  </div>
+  <div class="wrap hero-sellos">
+    <span>Facturación electrónica ARCA · RG 4892/2020</span><span>Aplicación web progresiva (PWA)</span><span>Aislamiento multi-tenant</span><span>Operación en tiempo real</span>
+  </div>
+</section>
+
+<!-- ============ ARQUITECTURA ============ -->
+<section class="sec" id="arquitectura">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Arquitectura funcional de la suite</p>
+      <h2>Cuatro módulos nativos sobre un único modelo de datos.</h2>
+      <p class="lead">Cada operación —pedido, reserva de stock, preparación, despacho, facturación y cobranza— se registra una sola vez y se propaga de forma transaccional a todas las áreas. Sin interfaces entre sistemas, sin conciliaciones manuales.</p>
+    </header>
+    <div class="mods">
+      <article class="mod">
+        <div class="mod-tag">ERP</div>
+        <h3>Enterprise Resource Planning</h3>
+        <p class="mod-sub">Administración y Finanzas</p>
+        <ul>
+          <li>Gestión de compras y órdenes de compra por proveedor.</li>
+          <li>Matrices de listas de precios por canal, familia y proveedor.</li>
+          <li>Cuentas corrientes con imputación cronológica automatizada de cobranzas.</li>
+          <li>Auditoría de operaciones por perfil de usuario.</li>
+          <li>Comprobantes electrónicos ARCA: Facturas A, B y C con CAE y Código QR fiscal (RG 4892/2020).</li>
+        </ul>
+      </article>
+      <article class="mod">
+        <div class="mod-tag">WMS</div>
+        <h3>Warehouse Management System</h3>
+        <p class="mod-sub">Gestión de Depósito e Inventario</p>
+        <ul>
+          <li>Existencias en tiempo real con conversión matemática automatizada entre <b>Bultos (UxB)</b> y <b>Unidades</b>.</li>
+          <li>Consolidados de preparación de pedidos por tanda y por cliente.</li>
+          <li>Trazabilidad de movimientos físicos, lotes y vencimientos (FEFO).</li>
+          <li>Recepción de mercadería, ajustes, mermas y conteos.</li>
+        </ul>
+      </article>
+      <article class="mod">
+        <div class="mod-tag">TMS</div>
+        <h3>Transport Management System</h3>
+        <p class="mod-sub">Logística y Distribución</p>
+        <ul>
+          <li>Consolidación de tandas de carga por unidad de transporte.</li>
+          <li>Hojas de Ruta y Planillas de Descarga segmentadas por cliente.</li>
+          <li>Rendición de transporte con arqueo y control de retornos en ruta.</li>
+          <li>Zonificación de reparto y capacidad de flota por bultos y kilos.</li>
+        </ul>
+        <a class="mod-link" href="#logistica">Ver el módulo en operación →</a>
+      </article>
+      <article class="mod">
+        <div class="mod-tag">CRM · B2B</div>
+        <h3>Gestión Comercial y Preventa Móvil</h3>
+        <p class="mod-sub">Fuerza de ventas y autogestión mayorista</p>
+        <ul>
+          <li>Aplicación web progresiva (PWA) para preventistas, con operación sin conectividad.</li>
+          <li>Segregación estricta de carteras por vendedor.</li>
+          <li>Alertas preventivas de riesgo crediticio y mora en el punto de venta.</li>
+          <li>Portal B2B de autogestión con catálogo digital y estado de cuenta.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="flujo" aria-label="Flujo transaccional">
+      <span>Pedido</span><i aria-hidden="true"></i><span>Reserva de stock</span><i aria-hidden="true"></i><span>Picking</span><i aria-hidden="true"></i><span>Facturación ARCA</span><i aria-hidden="true"></i><span>Despacho</span><i aria-hidden="true"></i><span>Rendición</span><i aria-hidden="true"></i><span>Cobranza</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGÍSTICA Y FLOTA (TMS) ============ -->
+<section class="sec sec-alt" id="logistica">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Módulo TMS · Logística y flota</p>
+      <h2>Planificación de repartos georreferenciada y ejecución en ruta.</h2>
+      <p class="lead">La oficina consolida los comprobantes por unidad de transporte sobre el mapa de clientes y controla la ocupación de cada camión; el fletero ejecuta la hoja de ruta desde su terminal móvil y la rendición se concilia contra lo efectivamente entregado.</p>
+    </header>
+    <div class="tms">
+      <figure class="tms-desk">
+        <div class="frame-desk frame-desk--light">
+          <div class="frame-bar"><i></i><i></i><i></i><span>nexos-erpmt.vercel.app · Reparto · Carga y ruta</span></div>
+          <img src="captura-repartos-mapa.png" alt="Reparto asignado a camión y chofer, con ocupación de bultos y kilos, mapa de clientes con trazado de ruta y carga del camión en BULTOS UxB y UNIDADES" width="2400" height="1429" loading="lazy">
+        </div>
+        <figcaption><b>Armado y control del reparto.</b> Asignación por camión y chofer, ocupación de la unidad en bultos y kilos, paradas numeradas con trazado de ruta optimizado por cercanía y carga consolidada en <code>BULTOS UxB ┃ UNIDADES</code>.</figcaption>
+      </figure>
+      <figure class="tms-phone">
+        <div class="frame-phone frame-phone--static"><div class="phone-notch" aria-hidden="true"></div><img src="captura-fletero.png" alt="App del fletero: hoja de ruta activa con avance de entregas, detalle de bultos y unidades por cliente, cobro y devolución registrada" width="1170" height="2532" loading="lazy"></div>
+        <figcaption><b>App del fletero.</b> Hoja de ruta activa, entregas pendientes por cliente, detalle de bultos y unidades a descargar, cobros y retornos con motivo.</figcaption>
+      </figure>
+    </div>
+    <ul class="tms-puntos">
+      <li><b>Consolidación por unidad de transporte.</b> Tandas de carga incrementales, control de capacidad y bloqueo del reparto al iniciar la preparación.</li>
+      <li><b>Ruteo y navegación.</b> Orden de paradas por cercanía desde el depósito y apertura directa del recorrido en Google Maps.</li>
+      <li><b>Registro en el punto de entrega.</b> Entregas totales o parciales, rechazos por artículo con motivo, cobros en efectivo o transferencia con comprobante fotográfico.</li>
+      <li><b>Rendición y retornos.</b> Arqueo de efectivo por denominación, conciliación automática contra lo entregado y reingreso de la mercadería devuelta a stock.</li>
+    </ul>
+    <p class="nota-mapa">En el entorno de demostración el mapa se presenta sobre un plano ilustrativo; en producción se utiliza cartografía de OpenStreetMap.</p>
+  </div>
+</section>
+
+<!-- ============ CAPACIDADES ============ -->
+<section class="sec sec-dark" id="capacidades">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Diferenciales técnicos y operativos</p>
+      <h2>Precisión operativa de punta a punta.</h2>
+    </header>
+    <div class="caps">
+      <article class="cap">
+        <div class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
+        <h3>Trazabilidad dual <code>Bultos UxB ┃ Unidades</code></h3>
+        <p>Precisión aritmética en toda la cadena operativa: captura del pedido, reserva de stock, picking en depósito, facturación y rendición de transporte. La conversión es automática: 20 unidades de un bulto de 16 se registran como 1 bulto + 4 unidades.</p>
+        <div class="bu-demo" aria-hidden="true"><span><b>2</b> <small>x 16</small></span><i></i><span><b>4</b></span></div>
+      </article>
+      <article class="cap">
+        <div class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V7l8-4z"/><path d="M12 8v5M12 16h.01"/></svg></div>
+        <h3>Control crediticio preventivo en el punto de venta</h3>
+        <p>Evaluación automática de saldos vencidos y exposición de comprobantes impagos en el terminal móvil del preventista, previo a la confirmación de nuevas órdenes. Las excepciones de crédito, precio o stock se derivan a un circuito de autorización por área.</p>
+      </article>
+      <article class="cap">
+        <div class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M12 5v14M6 9h3M6 12h3M15 9h3M15 12h3"/></svg></div>
+        <h3>Documentación fiscal y logística estandarizada (A4)</h3>
+        <p>Comprobantes Original | Duplicado en A4 apaisada con identidad corporativa, QR Fiscal ARCA y QR de transferencia bancaria integrado para acelerar el ciclo de cobranza. Planillas logísticas separadas por orientación de impresión.</p>
+      </article>
+      <article class="cap">
+        <div class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></div>
+        <h3>Seguridad multi-tenant y gobierno de datos</h3>
+        <p>Aislamiento lógico por organización (<em>tenant</em>), políticas de seguridad a nivel de fila (RLS) en la propia base de datos para la protección de carteras comerciales, transacciones atómicas en todas las operaciones de stock y facturación, sobre infraestructura cloud de alta disponibilidad con respaldos programados.</p>
+      </article>
+    </div>
+
+    <div class="vitrina">
+      <figure class="vitrina-doc">
+        <img src="captura-comprobante.png" alt="Factura A electrónica, Original y Duplicado, con QR fiscal ARCA y QR de pago bancario" width="2695" height="1906" loading="lazy">
+        <figcaption><b>Comprobante A4 apaisado.</b> Original y Duplicado en una hoja, columnas <code>BULTOS UxB ┃ UNIDADES</code>, bloque fiscal ARCA (QR, CAE y vencimiento) y QR de pago junto a los datos bancarios.</figcaption>
+      </figure>
+      <figure class="vitrina-phone">
+        <div class="frame-phone frame-phone--static"><div class="phone-notch" aria-hidden="true"></div><img src="captura-preventista.png" alt="App del preventista con alerta de deuda vencida y catálogo con fotos" width="1170" height="2532" loading="lazy"></div>
+        <figcaption><b>Preventa móvil.</b> Cliente identificado por código, alerta de deuda vencida con detalle de comprobantes impagos y catálogo con carga de bultos y unidades.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESCALABILIDAD ============ -->
+<section class="sec" id="escalabilidad">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Escalabilidad por envergadura organizacional</p>
+      <h2>Una misma plataforma, dimensionada a cada estructura.</h2>
+    </header>
+    <div class="escalas">
+      <article class="escala">
+        <span class="escala-n num">01</span>
+        <h3>Pequeñas empresas y operaciones en estructuración</h3>
+        <p>Estandarización inmediata de circuitos administrativos y de depósito. Sustituye planillas aisladas por trazabilidad transaccional, sin inversión en servidores locales ni mantenimiento de infraestructura.</p>
+      </article>
+      <article class="escala">
+        <span class="escala-n num">02</span>
+        <h3>Empresas medianas y distribuidoras consolidadas</h3>
+        <p>Sincronización en tiempo real entre administración, depósito y fuerza de ventas externa. Optimiza la ocupación de flota mediante tandas de reparto, mitiga quebrantos por mora e incorpora autogestión digital B2B.</p>
+      </article>
+      <article class="escala">
+        <span class="escala-n num">03</span>
+        <h3>Grandes empresas y operaciones multi-sucursal</h3>
+        <p>Arquitectura preparada para múltiples depósitos y sucursales, segregación granular de permisos por rol operativo, control estricto de liquidaciones de transporte e indicadores gerenciales para la toma de decisiones.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LICENCIAMIENTO ============ -->
+<section class="sec sec-alt" id="licenciamiento">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Esquema de licenciamiento corporativo</p>
+      <h2>Tres niveles escalables, dimensionados según volumen operativo.</h2>
+      <p class="lead">La propuesta económica se elabora sobre la cantidad de usuarios, preventistas, unidades de transporte y sucursales de cada organización.</p>
+    </header>
+    <div class="planes">
+      <article class="plan">
+        <p class="plan-nivel">Licencia</p>
+        <h3>Essential</h3>
+        <p class="plan-alcance">Core ERP + WMS + TMS</p>
+        <ul>
+          <li>Gestión administrativa integral</li>
+          <li>Facturación Electrónica ARCA (A, B y C)</li>
+          <li>Control de inventario dual Bultos UxB ┃ Unidades</li>
+          <li>Logística de repartos, hojas de ruta y rendición</li>
+        </ul>
+        <a class="btn btn-outline" href="#contacto" data-plan="Essential">Solicitar propuesta</a>
+      </article>
+      <article class="plan plan-dest">
+        <p class="plan-badge">Suite completa</p>
+        <p class="plan-nivel">Licencia</p>
+        <h3>Professional</h3>
+        <p class="plan-alcance">Essential + CRM &amp; Portal B2B</p>
+        <ul>
+          <li>Todas las capacidades Essential</li>
+          <li>Aplicación móvil de preventa con control de cartera y mora</li>
+          <li>Tienda web B2B mayorista con estado de cuenta</li>
+          <li>Circuito de autorizaciones comerciales y logísticas</li>
+        </ul>
+        <a class="btn btn-primary" href="#contacto" data-plan="Professional">Solicitar propuesta</a>
+      </article>
+      <article class="plan">
+        <p class="plan-nivel">Licencia</p>
+        <h3>Enterprise</h3>
+        <p class="plan-alcance">Infraestructura multi-sucursal</p>
+        <ul>
+          <li>Operación multi-depósito</li>
+          <li>Usuarios y flota ampliados</li>
+          <li>Migración asistida de datos maestros</li>
+          <li>Soporte técnico prioritario y asistencia directa en implementación</li>
+        </ul>
+        <a class="btn btn-outline" href="#contacto" data-plan="Enterprise">Solicitar propuesta</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPLEMENTACIÓN ============ -->
+<section class="sec" id="implementacion">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">Metodología de implementación</p>
+      <h2>Puesta en marcha en 24 a 48 horas.</h2>
+      <p class="lead">El plazo se computa una vez recibidos los maestros de artículos y clientes en planilla (Excel o CSV), validados y completos.</p>
+    </header>
+    <ol class="etapas">
+      <li><span class="etapa-n num">Etapa 01</span><h3>Parametrización fiscal y corporativa</h3><p>Certificados ARCA, puntos de venta, identidad visual de los comprobantes y medios de cobro.</p></li>
+      <li><span class="etapa-n num">Etapa 02</span><h3>Migración de maestros</h3><p>Catálogo de artículos con unidades por bulto, listas de precios y padrón de clientes.</p></li>
+      <li><span class="etapa-n num">Etapa 03</span><h3>Capacitación operativa y puesta en producción</h3><p>Entrenamiento por rol —administración, depósito, logística y preventa— y salida a producción asistida.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="sec sec-dark" id="contacto">
+  <div class="wrap contacto">
+    <div class="contacto-info">
+      <p class="kicker">Contacto comercial</p>
+      <h2>Solicite una demostración técnica o una propuesta formal.</h2>
+      <p class="lead">Nuestro equipo evalúa su operación y presenta una propuesta dimensionada a su estructura de usuarios, preventistas y flota.</p>
+      <div class="canal">
+        <h3>Canal directo ejecutivo</h3>
+        <p>Coordinación de demostración técnica vía WhatsApp.</p>
+        <a class="btn btn-wa js-wa" data-msg="demo" href="https://wa.me/5493413231621" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true" class="ico-wa"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-2c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6C28.7 8.6 23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.2 1.2-4.2-.3-.4c-1-1.6-1.6-3.5-1.6-5.4C5.3 9.8 10.1 5.1 16 5.1s10.7 4.7 10.7 10.5S21.9 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+          +54 341 323 1621</a>
+      </div>
+      <div class="canal">
+        <h3>Acceso de clientes en producción</h3>
+        <p>Organizaciones con licencia activa.</p>
+        <a class="btn btn-ghost-dark" href="https://nexos-erpmt.vercel.app" rel="noopener">Acceso Clientes</a>
+      </div>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <h3>Requerimiento comercial / cotización</h3>
+      <p class="form-nota">Los campos marcados con * son obligatorios.</p>
+      <div class="f2">
+        <label class="campo"><span>Nombre y Apellido *</span><input name="nombre" autocomplete="name" required maxlength="80"></label>
+        <label class="campo"><span>Cargo / Área *</span><input name="cargo" autocomplete="organization-title" required maxlength="80"></label>
+      </div>
+      <label class="campo"><span>Razón Social *</span><input name="razon_social" autocomplete="organization" required maxlength="120"></label>
+      <div class="f2">
+        <label class="campo"><span>Correo Electrónico Corporativo *</span><input name="email" type="email" autocomplete="email" required maxlength="120"></label>
+        <label class="campo"><span>Teléfono de Contacto *</span><input name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="+54 9 341 …"></label>
+      </div>
+      <fieldset class="campo envergadura">
+        <legend>Envergadura Operativa *</legend>
+        <div class="f3">
+          <label><span>Usuarios de oficina</span><input name="usuarios" type="number" inputmode="numeric" min="0" max="10000" required></label>
+          <label><span>Preventistas</span><input name="preventistas" type="number" inputmode="numeric" min="0" max="10000" required></label>
+          <label><span>Unidades de flota</span><input name="flota" type="number" inputmode="numeric" min="0" max="10000" required></label>
+        </div>
+      </fieldset>
+      <label class="campo"><span>Licencia de interés</span>
+        <select name="licencia"><option value="">A definir</option><option>Essential</option><option>Professional</option><option>Enterprise</option></select></label>
+      <label class="campo"><span>Detalle del Requerimiento *</span><textarea name="detalle" rows="4" required minlength="20" maxlength="2000" placeholder="Describa su operación actual, sistemas en uso y objetivos de implementación."></textarea></label>
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-primary btn-lg btn-block" type="submit" id="enviar">Enviar requerimiento</button>
+      <p class="form-estado" id="estado" role="status" aria-live="polite" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-wrap">
+    <header class="sec-head">
+      <p class="kicker">Especificaciones frecuentes</p>
+      <h2>Consultas técnicas.</h2>
+    </header>
+    <div class="faq">
+      <details>
+        <summary>¿Qué arquitectura cloud utiliza la plataforma?</summary>
+        <p>NEXOS-ERP opera sobre una base de datos PostgreSQL gestionada en la nube, con una arquitectura multi-tenant: todas las organizaciones comparten la infraestructura, pero cada registro está asociado a su organización y las políticas de seguridad a nivel de fila (RLS) impiden el acceso cruzado. Las operaciones críticas de stock, facturación y cobranza se ejecutan como transacciones atómicas en el servidor, sobre infraestructura cloud de alta disponibilidad con respaldos programados.</p>
+      </details>
+      <details>
+        <summary>¿Cómo funciona la integración con ARCA?</summary>
+        <p>La plataforma solicita el CAE mediante los web services de facturación electrónica de ARCA con el certificado digital de cada organización. Los comprobantes A, B y C se emiten con CAE, fecha de vencimiento y Código QR fiscal según la RG 4892/2020, en formato A4 Original | Duplicado.</p>
+      </details>
+      <details>
+        <summary>¿La aplicación de preventa requiere instalación o conectividad permanente?</summary>
+        <p>No requiere tiendas de aplicaciones: es una aplicación web progresiva (PWA) que se instala desde el navegador en Android o iOS. Los pedidos tomados sin señal quedan en una cola local y se sincronizan automáticamente al recuperar la conexión.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se gestionan los bultos y las unidades sueltas?</summary>
+        <p>Cada artículo define sus unidades por bulto (UxB). Las cantidades se registran internamente en bultos con fracción exacta y se presentan siempre separadas en <code>BULTOS UxB ┃ UNIDADES</code> en pedidos, stock, planillas de carga, comprobantes y rendición. La base valida que las unidades sean enteras y convierte automáticamente los excedentes en bultos.</p>
+      </details>
+      <details>
+        <summary>¿Cuál es el protocolo de migración de datos?</summary>
+        <p>Se importan los maestros de artículos (con código, UxB, códigos EAN/DUN y familias), listas de precios y padrón de clientes desde planillas Excel o CSV, con validación previa de cada registro. Los saldos iniciales de cuenta corriente y stock se cargan como movimientos de apertura para preservar la trazabilidad.</p>
+      </details>
+      <details>
+        <summary>¿Quién puede ver la información de cada cliente?</summary>
+        <p>El acceso se define por rol. Cada preventista visualiza exclusivamente su cartera asignada —clientes, pedidos, saldos y cobranzas—, y cada cliente del portal B2B accede solo a su propia ficha, precios, pedidos y comprobantes. Estas restricciones se aplican en la base de datos, no solo en la interfaz.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pie">
+  <div class="wrap pie-in">
+    <div>
+      <a class="marca" href="#inicio"><span class="marca-iso" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 23V9l14 14V9"/></svg></span><span class="marca-txt">NEXOS<span>-ERP</span></span></a>
+      <p>Plataforma cloud ERP + WMS + TMS + CRM para empresas de distribución y logística mayorista.</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <a href="#arquitectura">Arquitectura</a><a href="#logistica">Logística y flota (TMS)</a><a href="#capacidades">Capacidades</a><a href="#licenciamiento">Licenciamiento</a><a href="#faq">Consultas técnicas</a><a href="https://nexos-erpmt.vercel.app" rel="noopener">Acceso Clientes</a>
+    </nav>
+    <div class="pie-contacto">
+      <a class="js-wa" data-msg="demo" href="https://wa.me/5493413231621" target="_blank" rel="noopener">WhatsApp +54 341 323 1621</a>
+      <span>Rosario, Santa Fe · Argentina</span>
+    </div>
+  </div>
+  <div class="wrap pie-legal"><span>© <span id="anio">2026</span> NEXOS-ERP. Todos los derechos reservados.</span><span>Las capturas corresponden al entorno de demostración con datos ficticios.</span></div>
+</footer>
+
+<a class="wa-float js-wa" data-msg="demo" href="https://wa.me/5493413231621" target="_blank" rel="noopener" aria-label="Solicitar demostración por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-2c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6C28.7 8.6 23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.2 1.2-4.2-.3-.4c-1-1.6-1.6-3.5-1.6-5.4C5.3 9.8 10.1 5.1 16 5.1s10.7 4.7 10.7 10.5S21.9 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
