@@ -271,3 +271,4 @@ kbd { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 
   .ticket { right: -6px; width: 38%; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+.canal-btns { display: flex; flex-wrap: wrap; gap: 10px; }

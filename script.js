@@ -10,7 +10,7 @@ const EMAIL_COMERCIAL = "";
 const WHATSAPP = "5493413231621";
 
 const MSG = {
-  demo: "Hola, quiero solicitar una demo de NEXOS ERP para mi negocio.",
+  consulta: "Hola, quiero consultar por NEXOS ERP para mi negocio.",
   pos: "Hola, quiero consultar por el plan Comercio / Almacén POS de NEXOS ERP (mostrador, balanza y caja).",
   estandar: "Hola, quiero consultar por el plan Distribuidora Estándar de NEXOS ERP.",
   full: "Hola, quiero consultar por el plan Full Distribuidora de NEXOS ERP.",
@@ -20,7 +20,7 @@ const $ = s => document.querySelector(s);
 const waLink = texto => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
 
 /* ---- enlaces de WhatsApp con mensaje formal ---- */
-document.querySelectorAll(".js-wa").forEach(a => { a.href = waLink(MSG[a.dataset.msg] || MSG.demo); });
+document.querySelectorAll(".js-wa").forEach(a => { a.href = waLink(MSG[a.dataset.msg] || MSG.consulta); });
 
 /* ---- año del pie ---- */
 const anio = $("#anio"); if (anio) anio.textContent = String(new Date().getFullYear());
