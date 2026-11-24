@@ -10,7 +10,11 @@ const EMAIL_COMERCIAL = "";
 const WHATSAPP = "5493413231621";
 
 const MSG = {
-  demo: "Buenos días. Me comunico para solicitar una demostración técnica de NEXOS-ERP para nuestra organización. Quedo a disposición para coordinar fecha y horario."
+  demo: "Hola, quiero solicitar una demo de NEXOS ERP para mi negocio.",
+  pos: "Hola, quiero consultar por el plan Comercio / Almacén POS de NEXOS ERP (mostrador, balanza y caja).",
+  estandar: "Hola, quiero consultar por el plan Distribuidora Estándar de NEXOS ERP.",
+  full: "Hola, quiero consultar por el plan Full Distribuidora de NEXOS ERP.",
+  medida: "Hola, quiero armar un plan personalizado de NEXOS ERP."
 };
 const $ = s => document.querySelector(s);
 const waLink = texto => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
@@ -28,12 +32,12 @@ burger?.addEventListener("click", () => { const ab = !menu.classList.contains("a
 menu?.querySelectorAll("a").forEach(a => a.addEventListener("click", cerrarMenu));
 document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarMenu(); });
 
-/* ---- licencia elegida desde las tarjetas ---- */
-document.querySelectorAll("[data-plan]").forEach(b => b.addEventListener("click", () => { const s = document.querySelector('select[name="licencia"]'); if (s) s.value = b.dataset.plan; }));
+/* ---- sombra del encabezado al desplazarse ---- */
+const nav = $("#nav"); const sombra = () => nav?.classList.toggle("sombra", scrollY > 8); addEventListener("scroll", sombra, { passive: true }); sombra();
 
 /* ---- aparición suave de bloques ---- */
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const els = document.querySelectorAll(".mod, .cap, .escala, .plan, .etapas li, .faq details, .vitrina figure, .tms figure, .tms-puntos li");
+  const els = document.querySelectorAll(".sol, .mod, .feat, .capi, .plan, .cloud-item, .faq details");
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
   els.forEach(el => { el.classList.add("reveal"); io.observe(el); });
 }
@@ -41,23 +45,17 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
 /* ---- formulario de requerimiento comercial ---- */
 const form = $("#form"), estado = $("#estado"), btn = $("#enviar");
 const REGLAS = {
-  nombre: v => v.length >= 3 || "Ingrese nombre y apellido.",
-  cargo: v => v.length >= 2 || "Indique su cargo o área.",
-  razon_social: v => v.length >= 2 || "Indique la razón social.",
-  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || "Ingrese un correo electrónico válido.",
-  telefono: v => v.replace(/\D/g, "").length >= 8 || "Ingrese un teléfono de contacto válido.",
-  usuarios: v => (v !== "" && Number(v) >= 0) || "Complete la cantidad.",
-  preventistas: v => (v !== "" && Number(v) >= 0) || "Complete la cantidad.",
-  flota: v => (v !== "" && Number(v) >= 0) || "Complete la cantidad.",
-  detalle: v => v.length >= 20 || "Describa el requerimiento (mínimo 20 caracteres)."
+  nombre: v => v.length >= 3 || "Ingresá tu nombre y apellido.",
+  razon_social: v => v.length >= 2 || "Indicá el nombre de tu empresa o comercio.",
+  telefono: v => v.replace(/\D/g, "").length >= 8 || "Ingresá un teléfono válido.",
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || "Ingresá un correo electrónico válido.",
+  rubro: v => v !== "" || "Elegí el tipo de negocio.",
+  detalle: v => v.length >= 10 || "Contanos brevemente qué necesitás (mínimo 10 caracteres)."
 };
-const ENVERG = ["usuarios", "preventistas", "flota"];
 function marcar(input, msg) {
-  const cont = ENVERG.includes(input.name) ? input.closest(".envergadura") : input.closest(".campo");
-  if (!cont) return;
+  const cont = input.closest(".campo"); if (!cont) return;
   cont.classList.toggle("err", !!msg); input.setAttribute("aria-invalid", msg ? "true" : "false");
   let m = cont.querySelector(".msg-err");
-  if (ENVERG.includes(input.name)) { const errs = ENVERG.map(n => form.elements[n]).filter(i => REGLAS[i.name](i.value.trim()) !== true); cont.classList.toggle("err", errs.length > 0); msg = errs.length ? "Complete usuarios, preventistas y unidades de flota." : ""; }
   if (msg) { if (!m) { m = document.createElement("span"); m.className = "msg-err"; cont.appendChild(m); } m.textContent = msg; } else m?.remove();
 }
 function validar() {
@@ -75,42 +73,40 @@ function datos() {
   const f = Object.fromEntries(new FormData(form).entries());
   return {
     ...f,
-    resumen: `REQUERIMIENTO COMERCIAL · NEXOS-ERP
-Nombre y Apellido: ${f.nombre}
-Cargo / Área: ${f.cargo}
-Razón Social: ${f.razon_social}
-Correo electrónico: ${f.email}
+    resumen: `CONSULTA COMERCIAL · NEXOS ERP
+Nombre: ${f.nombre}
+Empresa / comercio: ${f.razon_social}
+Tipo de negocio: ${f.rubro}
+Localidad: ${f.localidad || "-"}
 Teléfono: ${f.telefono}
-Envergadura operativa: ${f.usuarios} usuarios · ${f.preventistas} preventistas · ${f.flota} unidades de flota
-Licencia de interés: ${f.licencia || "A definir"}
+Correo: ${f.email}
 
-Detalle del requerimiento:
+Qué necesita:
 ${f.detalle}`
   };
 }
 form?.addEventListener("submit", async e => {
   e.preventDefault(); estado.hidden = true;
   if (form.elements.botcheck?.checked) return;
-  if (!validar()) { mostrar("error", "Revise los campos señalados."); return; }
+  if (!validar()) { mostrar("error", "Revisá los campos marcados."); return; }
   const d = datos();
   btn.disabled = true; const txt = btn.textContent; btn.textContent = "Enviando…";
   try {
     if (WEB3FORMS_ACCESS_KEY) {
       const r = await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ access_key: WEB3FORMS_ACCESS_KEY, subject: `Requerimiento comercial NEXOS-ERP · ${d.razon_social}`, from_name: "Landing NEXOS-ERP", replyto: d.email,
-          nombre: d.nombre, cargo: d.cargo, razon_social: d.razon_social, email: d.email, telefono: d.telefono, usuarios: d.usuarios, preventistas: d.preventistas, flota: d.flota,
-          licencia: d.licencia || "A definir", detalle: d.detalle, botcheck: false }) });
+        body: JSON.stringify({ access_key: WEB3FORMS_ACCESS_KEY, subject: `Consulta comercial NEXOS ERP · ${d.razon_social}`, from_name: "Web nexoserp.com.ar", replyto: d.email,
+          nombre: d.nombre, razon_social: d.razon_social, rubro: d.rubro, localidad: d.localidad || "", email: d.email, telefono: d.telefono, detalle: d.detalle, botcheck: false }) });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || j.success === false) throw new Error(j.message || "No se pudo registrar el requerimiento.");
-      form.reset(); mostrar("ok", `Requerimiento recibido. Gracias, ${d.nombre.split(" ")[0]}: nuestro equipo comercial responderá a ${d.email} a la brevedad.`);
+      if (!r.ok || j.success === false) throw new Error(j.message || "No se pudo enviar la consulta.");
+      form.reset(); mostrar("ok", `¡Gracias, ${d.nombre.split(" ")[0]}! Recibimos tu consulta y te respondemos a la brevedad.`);
     } else if (EMAIL_COMERCIAL) {
-      location.href = `mailto:${EMAIL_COMERCIAL}?subject=${encodeURIComponent("Requerimiento comercial NEXOS-ERP · " + d.razon_social)}&body=${encodeURIComponent(d.resumen)}`;
-      mostrar("info", "Se abrió su cliente de correo con el requerimiento completo. Envíe el mensaje para finalizar la solicitud.");
+      location.href = `mailto:${EMAIL_COMERCIAL}?subject=${encodeURIComponent("Consulta comercial NEXOS ERP · " + d.razon_social)}&body=${encodeURIComponent(d.resumen)}`;
+      mostrar("info", "Se abrió tu correo con la consulta completa. Envialo para terminar.");
     } else {
       window.open(waLink(d.resumen), "_blank", "noopener");
-      mostrar("info", "Se abrió WhatsApp con el requerimiento completo. Envíe el mensaje para finalizar la solicitud.");
+      mostrar("info", "Se abrió WhatsApp con tu consulta completa. Envialo para terminar.");
     }
   } catch (err) {
-    mostrar("error", `${err.message || "No se pudo enviar el requerimiento."} Puede comunicarse directamente por WhatsApp al +54 341 323 1621.`);
+    mostrar("error", `${err.message || "No se pudo enviar la consulta."} Escribinos directo por WhatsApp al +54 341 323 1621.`);
   } finally { btn.disabled = false; btn.textContent = txt; }
 });
