@@ -48,11 +48,12 @@ kbd { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 
 .marca-iso svg { width: 22px; height: 22px; fill: none; stroke: #fff; stroke-width: 3.6; stroke-linecap: round; stroke-linejoin: round; }
 .marca-txt { white-space: nowrap; font: 800 20px/1 var(--fh); color: var(--tinta); letter-spacing: .02em; }
 .marca-txt span { color: var(--verde); }
-.nav-links { display: flex; gap: 4px; margin-left: 12px; }
-.nav-links > a { color: var(--texto); text-decoration: none; font-weight: 500; font-size: 15px; padding: 8px 10px; border-radius: 8px; white-space: nowrap; }
+.nav-links { display: flex; gap: 2px; margin-left: 8px; }
+.nav-links > a { color: var(--texto); text-decoration: none; font-weight: 500; font-size: 15px; padding: 8px 9px; border-radius: 8px; white-space: nowrap; }
 .nav-links > a:hover { color: var(--azul); background: var(--azul-l); }
 .nav-acc { margin-left: auto; display: flex; gap: 10px; }
 .nav-acc-movil { display: none; }
+.nav-links .solo-movil { display: none; }
 .nav-burger { display: none; margin-left: auto; width: 44px; height: 44px; border: 1px solid var(--linea); border-radius: 10px; background: #fff; cursor: pointer; padding: 11px 10px; flex-direction: column; justify-content: space-between; }
 .nav-burger span { display: block; height: 2px; background: var(--tinta); border-radius: 2px; }
 
@@ -228,7 +229,7 @@ kbd { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 
 .reveal.visto { opacity: 1; transform: none; }
 
 /* ---------- responsive ---------- */
-@media (max-width: 1280px) {
+@media (max-width: 1400px) {
   .nav-links > a { padding: 8px 6px; font-size: 14px; }
   .nav-in { gap: 14px; }
   .nav-acc .btn { padding: 11px 14px; font-size: 14.5px; }
@@ -239,7 +240,8 @@ kbd { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 
   .manual { grid-template-columns: 300px 1fr; }
   .caps { grid-template-columns: 1fr; }
 }
-@media (max-width: 1180px) {
+@media (max-width: 1279px) {
+  .nav-links .solo-movil { display: block; }
   .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; background: #fff; border-bottom: 1px solid var(--linea); padding: 12px 20px 20px; box-shadow: 0 16px 30px rgba(15, 27, 51, .1); margin: 0; }
   .nav-links.abierto { display: flex; }
   .nav-links > a { padding: 12px 8px; font-size: 16px; }
@@ -272,3 +274,4 @@ kbd { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 .canal-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+#mostrador { overflow-x: clip; }

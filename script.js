@@ -10,7 +10,7 @@ const EMAIL_COMERCIAL = "";
 const WHATSAPP = "5493413231621";
 
 const MSG = {
-  consulta: "Hola, quiero consultar por NEXOS ERP para mi negocio.",
+  consulta: "Hola! Quiero consultar por NEXOS ERP",
   pos: "Hola, quiero consultar por el plan Comercio / Almacén POS de NEXOS ERP (mostrador, balanza y caja).",
   estandar: "Hola, quiero consultar por el plan Distribuidora Estándar de NEXOS ERP.",
   full: "Hola, quiero consultar por el plan Full Distribuidora de NEXOS ERP.",
