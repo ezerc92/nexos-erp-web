@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: #0a0f1c; color: #dbe3f3; font-family: "Inter", system-ui, sans-serif; }
+.estudio { min-height: 100%; display: flex; align-items: center; justify-content: center; gap: 40px; padding: 24px; flex-wrap: wrap; }
+.marco { position: relative; height: min(92vh, 1920px); aspect-ratio: 9 / 16; max-width: 100%; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .08); background: #0b1530; }
+.marco canvas { width: 100%; height: 100%; display: block; }
+.marco:fullscreen { height: 100vh; width: auto; border-radius: 0; margin: auto; }
+.marco:fullscreen canvas { height: 100vh; width: auto; margin: 0 auto; }
+.cargando { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 600; color: #9fb0d0; background: #0b1530; }
+.cargando[hidden] { display: none; }
+.panel { width: 340px; max-width: 100%; display: grid; gap: 12px; }
+.panel h1 { font: 800 26px/1.15 "Plus Jakarta Sans", sans-serif; color: #fff; margin: 0; }
+.panel h1 span { display: block; color: #22c55e; font-size: 18px; margin-top: 4px; }
+.meta { margin: 0; color: #8a9ab8; font-size: 14px; }
+.botones { display: flex; flex-wrap: wrap; gap: 8px; }
+button { font: 600 15px/1 "Inter", sans-serif; border-radius: 10px; padding: 12px 14px; cursor: pointer; border: 1px solid #2a3a5e; background: #131d36; color: #fff; transition: background .15s, transform .15s; }
+button:hover { background: #1b2848; transform: translateY(-1px); }
+button:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.grabar { background: #1748b8; border-color: #1748b8; padding: 15px; font-size: 16px; }
+.grabar:hover { background: #2f6bf0; }
+.grabar.alt { background: #12a150; border-color: #12a150; }
+.grabar.alt:hover { background: #16b85c; }
+.grabar.rec { background: #dc2626; border-color: #dc2626; }
+.estado { margin: 0; min-height: 22px; font-size: 14px; color: #fbbf24; }
+.ayuda { margin: 4px 0 0; padding-left: 18px; font-size: 13.5px; color: #8a9ab8; display: grid; gap: 8px; line-height: 1.45; }
+.ayuda b { color: #dbe3f3; }
+@media (max-width: 760px) { .marco { height: auto; width: 100%; } }
